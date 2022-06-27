@@ -134,16 +134,16 @@ def main(date=None):
         logger.info(f"File size: {Path(dv_loc).stat().st_size}")
 
 
-# main(date="2021-08-15")
+main(date="2021-08-15")
         
         
-DeploymentSpec(
-    name="cron-schedule-deployment",
-    flow=main,
-    schedule=CronSchedule(
-        cron="0 9 15 * *",
-        timezone="Europe/Prague"
-    ),
-    flow_runner=SubprocessFlowRunner(),
-)
+# DeploymentSpec(
+#     name="cron-schedule-deployment",
+#     flow=main,
+#     schedule=CronSchedule(
+#         cron="0 9 15 * *",
+#         timezone="Europe/Prague"
+#     ),
+#     flow_runner=SubprocessFlowRunner(),
+# )
 
